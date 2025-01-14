@@ -1,0 +1,14 @@
+{
+  "name": "stocks-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ivannarvaez17/stocks-backend",
+  "author": "Ivan <ivannarvaez17@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@polygon.io/client-js": "^7.3.2",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
