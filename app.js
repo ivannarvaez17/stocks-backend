@@ -1,9 +1,10 @@
 import express from 'express'
-const app = express()
-/*const stocksControlle = require('./serti/stocks')
+import router  from './src/stocks/controllers/users.controller.js'
 
-app.use('/users', usersController)
-*/
+const app = express()
+
+app.use('/users', router)
+
 app.listen(3000, () => {
   console.log('Server is listening on port 3000')
 })

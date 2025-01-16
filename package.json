@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/ivannarvaez17/stocks-backend",
-  "author": "Ivan <ivannarvaez17@gmail.com>",
+  "author": "Ivan Narvaez <ivannarvaez17@gmail.com>",
   "license": "MIT",
   "private": false,
   "dependencies": {
     "@polygon.io/client-js": "^7.3.2",
+    "@prisma/client": "6.2.1",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
-  }
+  },
+  "devDependencies": {
+    "prisma": "6.2.1"
+  },
+  "type": "module"
 }
