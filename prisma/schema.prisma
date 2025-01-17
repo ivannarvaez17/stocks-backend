@@ -14,11 +14,11 @@ datasource db {
 model users {
   id                               String          @id @default(uuid())
   created_at                       DateTime        @db.Timestamp(6)  @default(now())
-  username                         String          @db.VarChar(255)  @unique
-  pass                             String          @db.VarChar(30)
+  email                            String          @db.VarChar(255)  @unique
+  pass                             String          @db.VarChar(400)
   stocks                           user_stocks[]
 
-  @@index(fields: [username])
+  @@index(fields: [email])
 }
 
 model stocks {

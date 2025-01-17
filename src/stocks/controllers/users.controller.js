@@ -1,8 +1,9 @@
-import { Router } from 'express'
+import Router from 'express'
+import UsersService from './src/stocks/services/users.service.js'
 
-const router = Router()
+const userController = Router()
 
-router.get('/overview',  async (req, res) => {
+userController.get(':userId/overview',  async (req, res) => {
   try {    
     res.json({})
   } catch (error) {
@@ -10,4 +11,4 @@ router.get('/overview',  async (req, res) => {
   }
 })
 
-export default router
+export default userController

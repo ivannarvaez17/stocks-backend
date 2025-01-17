@@ -1,10 +1,17 @@
 import express from 'express'
-import router  from './src/stocks/controllers/users.controller.js'
+import userController  from './src/stocks/controllers/users.controller.js'
+import bodyParser from 'body-parser'
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 const app = express()
 
-app.use('/users', router)
+app.use(bodyParser.json());
+app.use('/users', userController)
 
-app.listen(3000, () => {
-  console.log('Server is listening on port 3000')
+const port = process.env.PORT
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`)
 })

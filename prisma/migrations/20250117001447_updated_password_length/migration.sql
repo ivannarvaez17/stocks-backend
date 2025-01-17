@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "users" ALTER COLUMN "pass" SET DATA TYPE VARCHAR(400);
