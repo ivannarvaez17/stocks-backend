@@ -10,6 +10,7 @@
     "@polygon.io/client-js": "^7.3.2",
     "@prisma/client": "6.2.1",
     "@types/node": "^22.10.7",
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
