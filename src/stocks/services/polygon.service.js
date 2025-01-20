@@ -1,6 +1,6 @@
 import axios from 'axios';
-import config from './src/shared/environment.js';
-import { StocksRepository } from './src/stocks/repositories/stock.repository';
+import config from '../../shared/environment.js';
+import { StocksRepository } from '../repositories/stock.repository.js';
 
 class PolygonService {
     constructor() {
@@ -25,3 +25,6 @@ class PolygonService {
         return await this.stocksRepository.getStockChanges(results);        
     }
 }
+
+
+export { PolygonService }

@@ -8,7 +8,6 @@ const app = express()
 app.use(bodyParser.json());
 app.use('/users', userController)
 
-
 app.listen(config.port, () => {
-  console.log(`Server is listening on port ${port}`)
+  console.log(`Server is listening on port ${config.port}`)
 })

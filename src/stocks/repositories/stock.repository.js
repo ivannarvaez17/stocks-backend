@@ -1,4 +1,4 @@
-import { prisma } from "src/shared/services/prisma.service";
+import { prisma } from "../../shared/db/prisma.service.js";
 export class StocksRepository {
    
     async getStockChanges(results) {
