@@ -20,9 +20,9 @@ export class UserStocksRepository {
     async runRawSelect(query) {
         console.log("UserStocksRepository.runRawSelect", query);
         try {
-            return await prisma.queryRawUnsafe(query);
+            return await prisma.$queryRawUnsafe(query);
         } catch (err) {
-            console.log('UserStocksRepository.runRawSelect: Something went wrong while reading from intermediate db', err);
+            console.log('UserStocksRepository.runRawSelect: Something went wrong while reading the user stocks information', err);
             return null;
         }
     }

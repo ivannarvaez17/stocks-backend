@@ -5,14 +5,15 @@ export class StocksRepository {
         let sqlQuery = `
             SELECT
                 stocks.name,
+                stocks.img_url as imgUrl,
                 stocks.ticker,
                 stockData.opening,
                 stockData.closing,
                 stockData.average,
                 stockData.change,
-                stockData.percentageChange
+                stockData.percentageChange as percentageChange
             FROM
-                stocks AS t
+                stocks
                 INNER JOIN (
                     VALUES `;
 
@@ -25,7 +26,10 @@ export class StocksRepository {
                 const average = tickerData.results[0].vw;
 
                 const change = opening - closing;
-                const percentageChange = ((change / opening) * 100).toFixed(2);
+                let percentageChange = ((change / opening) * 100).toFixed(2);
+                if (closing < opening) {
+                    percentageChange = `-${Math.abs(percentageChange)}`; // Add a minus sign if closing is less than opening
+                }
 
                 sqlQuery += `('${tickerName}', ${opening}, ${closing}, ${average}, ${change}, ${percentageChange}),`;
             } else {
@@ -37,11 +41,9 @@ export class StocksRepository {
             sqlQuery = sqlQuery.slice(0, -1);
         }
 
-        sqlQuery += `) AS stockData (ticker, opening, closing, average, change, percentageChange) ON stockData.ticker = t.ticker
+        sqlQuery += `) AS stockData (ticker, opening, closing, average, change, percentageChange) ON stockData.ticker = stocks.ticker
             WHERE
-                stockData.ticker = t.ticker;`;
-
-        console.log("SQL Query:", sqlQuery);
+                stockData.ticker = stocks.ticker;`;
         
         return await this.runRawSelect(sqlQuery);
     }
@@ -49,9 +51,9 @@ export class StocksRepository {
     async runRawSelect(query) {
         console.log("StockRepository.runRawSelect", query);
         try {
-            return await prisma.queryRawUnsafe(query);
+            return await prisma.$queryRawUnsafe(query);
         } catch (err) {
-            console.log('StocksRepository.findFirst: Something went wrong while reading from intermediate db', err);
+            console.log('StocksRepository.findFirst: Something went wrong while reading the stocks information', err);
             return null;
         }
     }

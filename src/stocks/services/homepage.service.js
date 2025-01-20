@@ -12,7 +12,10 @@ export class HomePageService {
         
         if (!tickers || tickers.length === 0) {
             return {
-                totalInvesting: 0,
+                totalInvesting: {
+                    total: 0,
+                    percentagechange: 0
+                },
                 buyingPower: 0,
                 stocksData: []
             };
@@ -22,7 +25,10 @@ export class HomePageService {
         const stocksData = await this.polygonService.fetchStockData(tickerValues);
 
         const overview = {
-            totalInvesting: 600.55,
+            totalInvesting: {
+                total: 600.55,
+                percentagechange: 1.64
+            },
             buyingPower: 545.55,
             stocksData: stocksData
         };

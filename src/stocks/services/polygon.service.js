@@ -13,9 +13,9 @@ class PolygonService {
         }
 
         const promises = tickers.map(ticker => {
-            return axios.get(`${config.POLYGON_URL}/${ticker}/prev`, {
+            return axios.get(`${config.polygonURL}/v2/aggs/ticker/${ticker}/prev`, {
                 params: {
-                    apiKey: config.POLYGON_API_KEY 
+                    apiKey: config.polygonAPIKey
                 }
             });
         });

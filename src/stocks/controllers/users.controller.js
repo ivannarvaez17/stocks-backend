@@ -4,8 +4,8 @@ import { HomePageService } from '../services/homepage.service.js';
 const userController = Router();
 const homePageService = new HomePageService();
 
-userController.get(':userId/overview', async (req, res) => {
-    const { userId } = req.params.userId;
+userController.get('/:userId/overview', async (req, res) => {
+    const userId  = req.params.userId;
     try {
         const overview = await homePageService.getUserOverview(userId);
         res.json(overview);
