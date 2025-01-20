@@ -26,6 +26,7 @@ model stocks {
   created_at                       DateTime        @db.Timestamp(6)  @default(now())
   name                             String          @db.VarChar(255)  
   ticker                           String          @db.VarChar(10)  @unique
+  img_url                          String          @db.VarChar(400)
   users                            user_stocks[]
 
   @@index(fields: [ticker])
