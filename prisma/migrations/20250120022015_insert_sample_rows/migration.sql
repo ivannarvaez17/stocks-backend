@@ -6,16 +6,16 @@ VALUES('8dfff74f-ff77-4b88-bbb6-6f31fb0c8599', '2025-01-16 20:16:37.776', '$2a$1
 -- Stocks
 INSERT INTO public.stocks
 (id, created_at, "name", ticker, img_url)
-VALUES('8c6d7ffe-8171-4f79-8a27-e253dcf1ee13', '2025-01-19 22:12:32.804', 'Apple Inc.', 'AAPL', 'https://api.polygon.io/v1/reference/company-branding/d3d3LmFwcGxlLmNvbQ/images/2022-01-10_icon.png?apiKey=p_hx1miTyHR5DJA_XIFfdxcB7Ls7oOrF');
+VALUES('8c6d7ffe-8171-4f79-8a27-e253dcf1ee13', '2025-01-19 22:12:32.804', 'Apple Inc.', 'AAPL', 'https://logo.clearbit.com/apple.com');
 INSERT INTO public.stocks
 (id, created_at, "name", ticker, img_url)
-VALUES('ff33315f-4bfa-4110-b5a8-046c72dc0118', '2025-01-19 22:15:55.934', 'Spotify Technology S.A.', 'SPOT', 'https://api.polygon.io/v1/reference/company-branding/c3BvdGlmeS5jb20/images/2024-10-01_icon.jpeg?apiKey=p_hx1miTyHR5DJA_XIFfdxcB7Ls7oOrF');
+VALUES('ff33315f-4bfa-4110-b5a8-046c72dc0118', '2025-01-19 22:15:55.934', 'Spotify Technology S.A.', 'SPOT', 'https://logo.clearbit.com/spotify.com');
 INSERT INTO public.stocks
 (id, created_at, "name", ticker, img_url)
-VALUES('d071ce50-22a7-4edf-b6eb-0ae2faa54bb4', '2025-01-19 22:15:55.971', 'Adobe Inc.', 'ADBE', 'https://api.polygon.io/v1/reference/company-branding/YWRvYmUuY29t/images/2024-10-01_icon.png?apiKey=p_hx1miTyHR5DJA_XIFfdxcB7Ls7oOrF');
+VALUES('d071ce50-22a7-4edf-b6eb-0ae2faa54bb4', '2025-01-19 22:15:55.971', 'Adobe Inc.', 'ADBE', 'https://logo.clearbit.com/adobe.com');
 INSERT INTO public.stocks
 (id, created_at, "name", ticker, img_url)
-VALUES('f9bf0dbe-dd89-4ad7-b1f9-843a3422a3a7', '2025-01-19 22:15:55.998', 'Lyft, Inc.', 'LYFT', 'https://api.polygon.io/v1/reference/company-branding/bHlmdC5jb20/images/2024-10-01_icon.jpeg?apiKey=p_hx1miTyHR5DJA_XIFfdxcB7Ls7oOrF');
+VALUES('f9bf0dbe-dd89-4ad7-b1f9-843a3422a3a7', '2025-01-19 22:15:55.998', 'Lyft, Inc.', 'LYFT', 'https://logo.clearbit.com/lyft.com');
 
 -- User_Stocks
 INSERT INTO public.user_stocks

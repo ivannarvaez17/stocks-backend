@@ -6,6 +6,7 @@ const homePageService = new HomePageService();
 
 userController.get('/:userId/overview', async (req, res) => {
     const userId  = req.params.userId;
+
     try {
         const overview = await homePageService.getUserOverview(userId);
         res.json(overview);

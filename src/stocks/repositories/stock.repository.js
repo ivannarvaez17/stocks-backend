@@ -11,7 +11,7 @@ export class StocksRepository {
                 stockData.closing,
                 stockData.average,
                 stockData.change,
-                stockData.percentageChange as percentageChange
+                stockData.percentageChange 
             FROM
                 stocks
                 INNER JOIN (
